@@ -1,0 +1,14 @@
+
+<h2>Colorize any old grey scale picture </h2>
+<input type="file" (change)="onFileSelected($event)" />
+
+<!-- <label for="cartoon-type">Select level of Upscale:</label>
+<select id="cartoon-type" [(ngModel)]="selectedUpScaleLevel" name="upScale-type">
+  <option *ngFor="let upScaleLevel of upScaleLevels" [value]="upScaleLevel.key">{{ upScaleLevel.label }}</option>
+</select> -->
+
+
+<button (click)="colorizePhoto()">Colorize the Photo </button>
+
+<p>The process to colorize the photo will take a minute. Please be patient!</p>
+<img *ngIf="colorizeImageUrl" [src]="colorizeImageUrl" alt="Colorize photo">

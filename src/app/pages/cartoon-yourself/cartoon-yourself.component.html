@@ -1,0 +1,14 @@
+<!-- pages/cartoon/cartoon.component.html -->
+
+<h2>Cartoon Yourself</h2>
+<input type="file" (change)="onFileSelected($event)" />
+<label for="cartoon-type">Select Cartoon Type:</label>
+<select id="cartoon-type" [(ngModel)]="selectedCartoonType" name="cartoon-type">
+  <option *ngFor="let cartoonType of cartoonTypes" [value]="cartoonType.key">{{ cartoonType.label }}</option>
+</select>
+
+
+<button (click)="generateCartoonAnimation()">Generate Cartoon</button>
+
+<p>The process to cartoonify will take a minute. Please be patient!</p>
+<img *ngIf="cartoonImageUrl" [src]="cartoonImageUrl" alt="Cartoon Animation">

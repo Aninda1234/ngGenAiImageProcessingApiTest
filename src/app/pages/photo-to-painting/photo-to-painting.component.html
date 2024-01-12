@@ -1,0 +1,13 @@
+<!-- pages/photo-to-painting/photo-to-painting.component.html -->
+
+<h2>Photo to Painting</h2>
+<input type="file" (change)="onFileSelected($event)" />
+<label for="painting-option">Select Painting Option:</label>
+<select id="painting-option" [(ngModel)]="selectedPaintingOption" name="painting-option">
+  <option *ngFor="let option of paintingOptions" [value]="option.key">{{ option.label }}</option>
+</select>
+
+<button (click)="generatePainting()">Generate Painting</button>
+
+<img *ngIf="paintingImageUrl" [src]="paintingImageUrl" alt="Painting">
+

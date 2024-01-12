@@ -1,0 +1,17 @@
+<!-- live-photos.component.html -->
+
+<h2>Live Photos</h2>
+<input type="file" (change)="onFileSelected($event)" />
+<label for="live-photo-type">Select Live Photo Type:</label>
+<select id="live-photo-type" [(ngModel)]="selectedLivePhotoType" name="live-photo-type">
+  <option value="0">Avatar Version</option>
+  <option value="1">Full Body Version</option>
+</select>
+
+<button (click)="generateLivePhoto()">Generate Live Photo</button>
+
+<p>The process to bring the picture to life will take a minute. Please be patient!</p>
+<video *ngIf="videoBlob" width="400" controls>
+  <source [src]="getVideoUrl()" type="video/mp4">
+  Your browser does not support the video tag.
+</video>

@@ -1,0 +1,14 @@
+
+<h2>Upscale any image without information loss </h2>
+<input type="file" (change)="onFileSelected($event)" />
+
+<!-- <label for="cartoon-type">Select level of Upscale:</label>
+<select id="cartoon-type" [(ngModel)]="selectedUpScaleLevel" name="upScale-type">
+  <option *ngFor="let upScaleLevel of upScaleLevels" [value]="upScaleLevel.key">{{ upScaleLevel.label }}</option>
+</select> -->
+
+
+<button (click)="upScaleImage()">Upscale Image</button>
+
+<p>The process to upScale the image will take a minute. Please be patient!</p>
+<img *ngIf="upScaleImageUrl" [src]="upScaleImageUrl" alt="UpScaled Image">

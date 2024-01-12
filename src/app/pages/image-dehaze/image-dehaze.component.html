@@ -1,0 +1,8 @@
+
+<h2>Make the Image bit Clear </h2>
+<input type="file" (change)="onFileSelected($event)" />
+
+<button (click)="deHazeImage()">DeHaze Image</button>
+
+<p>The process to deHaze the image will take a minute. Please be patient!</p>
+<img *ngIf="deHazeImageUrl" [src]="deHazeImageUrl" alt="DeHazed Image">

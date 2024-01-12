@@ -1,0 +1,23 @@
+<!-- <h2>{{ title }}</h2> -->
+
+<!-- moved from main-page.component.html -->
+<h1>Welcome to Gen AI Image Processing App</h1>
+
+<ul>
+  <li><a routerLink="/cartoon-yourself">Cartoon Yourself</a></li>
+  <li><a routerLink="/live-photos">Live Photos. Make a Picture come alive. </a></li>
+  <li><a routerLink="/photo-to-painting">Photo to Painting</a></li>
+  <!-- <li><a >Photo to Painting (Not working. Some issue with the endpoint.) </a></li> -->
+  <!-- Found the issue. Base Url wasn't correct. -->
+  
+  <li><a routerLink="/app-image-dehaze">Make the Image bit Clear </a></li>
+  <li><a routerLink="/app-image-upscaler">Upscale the Small image to a Bigger one. </a></li>
+  <li><a routerLink="/app-photo-colorizer">Colorize an old grey scale image. </a></li>
+  <!-- <li><a routerLink="/app-cartoon-generator">Cartoon Generator</a></li> -->
+  <!-- Issue with Interface -->
+</ul>
+
+<router-outlet></router-outlet>
+
+<h3> A Gen AI powered app where you can do many interesting stuff on images like turn a picture into cartoon, or a painting or make it colorized or turn it into a live animation. </h3>
+
